@@ -68,7 +68,6 @@ func calculate(ex string) string {
 				num = num * (-1)
 				isNegative = false
 			}
-			fmt.Println(num)
 			numStack.Push(num)
 		}
 		if i >= len(ex) {
