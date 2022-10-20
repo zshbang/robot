@@ -50,7 +50,7 @@ func calculate(ex string) string {
 	numStack := NewStack(50)
 	isNegative := false
 	for i := 0; i < len(ex); {
-		if ex[i] == '-' && (numStack.IsEmpty() || opStack.Peek() == '(') {
+		if ex[i] == '-' && (numStack.IsEmpty() || ex[i-1] == '(') {
 			isNegative = true
 			i++
 		}
